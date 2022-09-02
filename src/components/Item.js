@@ -25,7 +25,7 @@ export default function Item(props) {
       <h3>{props.nombre}</h3>
       <p>{props.descripcion}</p>
       {/*Sets a conditional to show the value of the state or the word "Agotado" when it reaches 0*/}
-      <h5>En Stock: <span>{initial>0 ? initial : "Agotado"}</span></h5>
+      <h5>En Stock: {initial>0 ? initial : <span>agotado</span>}</h5>
       {/*Sets some attributes to disable the button and change its value when it reaches 0*, also link the button to the function
       which modifies the state by the event onClick*/}
       <button disabled={initial<=0} onClick={bought}> {initial>0 ? "COMPRAR" : "SIN STOCK"} </button>
